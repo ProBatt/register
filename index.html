@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ชื่อหัวฟอร์มของเรา</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fcefee;
+      color: #333;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-container {
+      background: #fffaf0;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #cc6699;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    select, input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff0f5;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #ffb6c1;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff99aa;
+    }
+
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>ชื่อหัวฟอร์มของเรา</h2>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfW8wumLQmXKGmWiGc_Ar2plxbHw3yIyCOqBmGaVwuFKQx3ig/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+      <label for="carplate">ทะเบียนรถที่เติม</label>
+      <select name="entry.1873515456" id="carplate" required>
+        <option value="บร-1425">บร-1425</option>
+        <option value="พศ-2526">พศ-2526</option>
+        <option value="คศ-2025">คศ-2025</option>
+        <option value="พร-1234">พร-1234</option>
+      </select>
+
+      <label for="liters">จำนวนลิตรที่เติม</label>
+      <input type="number" name="entry.1841981690" id="liters" required min="1" step="0.01">
+
+      <label for="person">คนที่เติม</label>
+      <select name="entry.193880446" id="person" required>
+        <option value="แดง">แดง</option>
+        <option value="น้อย">น้อย</option>
+        <option value="จิ๋ว">จิ๋ว</option>
+      </select>
+
+      <button type="submit">ส่งข้อมูล</button>
+    </form>
+    <iframe name="hidden_iframe" id="hidden_iframe"></iframe>
+  </div>
+</body>
+</html>
