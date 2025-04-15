@@ -1,95 +1,110 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ชื่อหัวฟอร์มของเรา</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fdf6f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .form-container {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
-    }
-    h1 {
-      text-align: center;
-      color: #7a6f9b;
-    }
-    label {
-      display: block;
-      margin-top: 1rem;
-      color: #555;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f9f5ff;
-    }
-    button {
-      margin-top: 1.5rem;
-      width: 100%;
-      padding: 0.8rem;
-      background-color: #a3c4f3;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #8db3e2;
-    }
-  </style>
-</head>
-<body>
-  <div class="form-container">
-    <h1>ชื่อหัวฟอร์มของเรา</h1>
-    <form id="fuelForm">
-      <label for="license">ทะเบียนรถที่เติม</label>
-      <input type="text" id="license" name="entry.123456789" required />
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScKTHnmM3GWaoUwTusnD9MOBI3ND4FaDLL7Uw2TsFkeSK53QA/formResponse"
+      target="_self"
+      id="bootstrapForm"
+      method="POST">
+    <fieldset>
+        <h2>Online_ลงทะเบียนการรับประกันแบตเตอรี่<br><small>* โปรดบันทึกข้อมูล เพื่อรักษาสิทธิประกัน</small></h2>
+    </fieldset>
 
-      <label for="liters">จำนวนลิตรที่เติม</label>
-      <input type="text" id="liters" name="entry.987654321" required />
 
-      <label for="person">คนที่เติม</label>
-      <input type="text" id="person" name="entry.192837465" required />
+    <!-- Field type: "date" id: "2082416532" -->
+    <fieldset>
+        <legend for="2082416532">วันที่ เปลี่ยน-ซื้อ แบตเตอรี่ :</legend>
+        <div class="form-group">
+            <p class="help-block">ตัวอย่าง : 23 / 12 / 2025</p>
+            <input type="date" id="1466271673_date" placeholder="15/4/2568" class="form-control" >
+        </div>
+    </fieldset>
 
-      <button type="submit">ส่งข้อมูล</button>
-    </form>
-  </div>
 
-  <script>
-    document.getElementById('fuelForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
-      const action = 'https://docs.google.com/forms/d/e/1FAIpQLSfW8wumLQmXKGmWiGc_Ar2plxbHw3yIyCOqBmGaVwuFKQx3ig/viewform?usp=dialog';
+    <!-- Field type: "short" id: "1261821081" -->
+    <fieldset>
+        <legend for="1261821081">เบอร์โทรศัพท์ ผู้ซื้อ :</legend>
+        <div class="form-group">
+            <input id="1337987657" type="text" name="entry.1337987657" class="form-control" required>
+        </div>
+    </fieldset>
 
-      fetch(action, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: data
-      }).then(() => {
-        // Optional: display a thank-you message or redirect
-        alert('ส่งข้อมูลเรียบร้อยแล้ว');
-        form.reset();
-      }).catch((error) => {
-        console.error('Error!', error.message);
-      });
-    });
-  </script>
-</body>
-</html>
+
+    <!-- Field type: "checkboxes" id: "1358296149" -->
+    <fieldset>
+        <legend for="1358296149">ประเภทบริการ :</legend>
+        <div class="form-group">
+            <p class="help-block">[ สามารถข้ามคำตอบนี้ได้ ]</p>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="entry.846612547" value="บริการ นอกสถานที่" >
+                    บริการ นอกสถานที่
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="entry.846612547" value="หน้าร้าน โปรแบต" >
+                    หน้าร้าน โปรแบต
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "98565871" -->
+    <fieldset>
+        <legend for="98565871">ยี่ห้อรถ - รุ่น - ทะเบียน - จังหวัด :</legend>
+        <div class="form-group">
+            <p class="help-block">ตัวอย่าง : Toyota Alphard  กข 2020 กทม.</p>
+            <input id="1057129787" type="text" name="entry.1057129787" class="form-control" required>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "1577974053" -->
+    <fieldset>
+        <legend for="1577974053">รุ่นแบตเตอรี่ที่เปลี่ยน :</legend>
+        <div class="form-group">
+            <p class="help-block">[ สามารถข้ามคำตอบนี้ได้ ]</p>
+            <input id="490785800" type="text" name="entry.490785800" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "1355252599" -->
+    <fieldset>
+        <legend for="1355252599">แนะนำ-ติ-ชม :</legend>
+        <div class="form-group">
+            <p class="help-block">[ สามารถข้ามคำตอบนี้ได้ ]</p>
+            <input id="1111723542" type="text" name="entry.1111723542" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "choices" id: "1586559506" -->
+    <fieldset>
+        <legend for="1586559506">PDPA Consent :</legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.1691501080" value="ยินยอม" required>
+                    ยินยอม
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.1691501080" value="ไม่ยินยอม ( เช็คประกันให้ไม่ได้ )" required>
+                    ไม่ยินยอม ( เช็คประกันให้ไม่ได้ )
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="3930096612797949583">
+    <!--
+        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+    -->
+    <input type="hidden" name="pageHistory" value="0">
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
