@@ -1,1 +1,103 @@
-ReferenceError: Uncaught ReferenceError: submitted is not defined
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ลงทะเบียนรับประกันแบตเตอรี่</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fef6f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    form {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      color: #ff8fab;
+    }
+    label {
+      display: block;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+    button {
+      background: #ffc2d1;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 2rem;
+    }
+    button:hover {
+      background: #ff8fab;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLScKTHnmM3GWaoUwTusnD9MOBI3ND4FaDLL7Uw2TsFkeSK53QA/formResponse" method="POST" target="hidden_iframe">
+    <h2>ลงทะเบียนรับประกัน</h2>
+
+    <label>วันที่ เปลี่ยน-ซื้อ แบตเตอรี่ :</label>
+    <input type="date" name="entry.1111111111" required />
+
+    <label>เบอร์โทรศัพท์ ผู้ซื้อ :</label>
+    <input type="text" name="entry.2222222222" required />
+
+    <label>ประเภทบริการ :</label>
+    <select name="entry.3333333333" required>
+      <option value="บริการ นอกสถานที่">บริการ นอกสถานที่</option>
+      <option value="หน้าร้าน โปรแบต">หน้าร้าน โปรแบต</option>
+    </select>
+
+    <label>ยี่ห้อรถ - รุ่น - ทะเบียน - จังหวัด :</label>
+    <input type="text" name="entry.4444444444" required />
+
+    <label>รุ่นแบตเตอรี่ที่เปลี่ยน :</label>
+    <input type="text" name="entry.5555555555" required />
+
+    <label>แนะนำ-ติ-ชม :</label>
+    <input type="text" name="entry.6666666666" />
+
+    <label>PDPA Consent :</label>
+    <select name="entry.7777777777" required>
+      <option value="ยินยอมให้ใช้ข้อมูล">ยินยอมให้ใช้ข้อมูล</option>
+      <option value="ไม่ยินยอม">ไม่ยินยอม</option>
+    </select>
+
+    <button type="submit">ส่งข้อมูล</button>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+  </form>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function () {
+      const iframe = document.getElementById('hidden_iframe');
+      iframe.onload = function () {
+        alert('ส่งข้อมูลเรียบร้อยแล้ว');
+        document.getElementById('myForm').reset();
+        iframe.onload = null; // reset to prevent multiple triggers
+      };
+    });
+  </script>
+
+</body>
+</html>
