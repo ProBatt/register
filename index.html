@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ลงทะเบียนรับประกันแบตเตอรี่</title>
+  <title>ชื่อหัวฟอร์มของเรา</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -24,20 +24,51 @@
     h2 {
       text-align: center;
       color: #ff8fab;
+      margin-bottom: 1.5rem;
     }
     label {
       display: block;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       font-weight: bold;
       color: #555;
     }
-    input, select, textarea, button {
-      width: 100%;
+    input[type="text"],
+    input[type="date"],
+    select,
+    button {
       margin-top: 0.5rem;
       padding: 0.75rem;
       border: 1px solid #ddd;
       border-radius: 0.5rem;
       font-size: 1rem;
+      width: 100%;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .checkbox-group label,
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      gap: 0.5rem;
+      background-color: #fff0f5;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ffc2d1;
+      transition: background 0.3s ease;
+    }
+    .checkbox-group label:hover,
+    .radio-group label:hover {
+      background-color: #ffe4ec;
+    }
+    .checkbox-group input[type="checkbox"],
+    .radio-group input[type="radio"] {
+      accent-color: #ff8fab;
+      transform: scale(1.2);
     }
     button {
       background: #ffc2d1;
@@ -54,35 +85,35 @@
 </head>
 <body>
 
-  <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLScKTHnmM3GWaoUwTusnD9MOBI3ND4FaDLL7Uw2TsFkeSK53QA/viewform/edit/formResponse" method="POST" target="hidden_iframe">
-    <h2>ลงทะเบียนรับประกัน</h2>
+  <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLScKTHnmM3GWaoUwTusnD9MOBI3ND4FaDLL7Uw2TsFkeSK53QA/formResponse" method="POST" target="hidden_iframe">
+    <h2>ชื่อหัวฟอร์มของเรา</h2>
 
     <label>วันที่ เปลี่ยน-ซื้อ แบตเตอรี่ :</label>
-    <input type="date" name="entry.1111111111" required />
+    <input type="date" name="entry.437168808" required />
 
     <label>เบอร์โทรศัพท์ ผู้ซื้อ :</label>
-    <input type="text" name="entry.2222222222" required />
+    <input type="text" name="entry.1056063324" required />
 
     <label>ประเภทบริการ :</label>
-    <select name="entry.3333333333" required>
-      <option value="บริการ นอกสถานที่">บริการ นอกสถานที่</option>
-      <option value="หน้าร้าน โปรแบต">หน้าร้าน โปรแบต</option>
-    </select>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="entry.808376958" value="บริการ นอกสถานที่"> บริการ นอกสถานที่</label>
+      <label><input type="checkbox" name="entry.808376958" value="หน้าร้าน โปรแบต"> หน้าร้าน โปรแบต</label>
+    </div>
 
     <label>ยี่ห้อรถ - รุ่น - ทะเบียน - จังหวัด :</label>
-    <input type="text" name="entry.4444444444" required />
+    <input type="text" name="entry.993215150" required />
 
     <label>รุ่นแบตเตอรี่ที่เปลี่ยน :</label>
-    <input type="text" name="entry.5555555555" required />
+    <input type="text" name="entry.1152110937" required />
 
     <label>แนะนำ-ติ-ชม :</label>
-    <input type="text" name="entry.6666666666" />
+    <input type="text" name="entry.626252787" />
 
     <label>PDPA Consent :</label>
-    <select name="entry.7777777777" required>
-      <option value="ยินยอมให้ใช้ข้อมูล">ยินยอมให้ใช้ข้อมูล</option>
-      <option value="ไม่ยินยอม">ไม่ยินยอม</option>
-    </select>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.42070162" value="ยินยอมให้เก็บรักษาข้อมูลส่วนบุคคล" required> ยินยอมให้เก็บรักษาข้อมูลส่วนบุคคล</label>
+      <label><input type="radio" name="entry.42070162" value="ไม่ยินยอม (เช็คประกันให้ไม่ได้)"> ไม่ยินยอม (เช็คประกันให้ไม่ได้)</label>
+    </div>
 
     <button type="submit">ส่งข้อมูล</button>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
@@ -94,7 +125,7 @@
       iframe.onload = function () {
         alert('ส่งข้อมูลเรียบร้อยแล้ว');
         document.getElementById('myForm').reset();
-        iframe.onload = null; // reset to prevent multiple triggers
+        iframe.onload = null;
       };
     });
   </script>
