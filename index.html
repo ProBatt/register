@@ -1,162 +1,96 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ชื่อหัวฟอร์มของเรา</title>
   <style>
     body {
-      background-color: #fdf6f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fef6f9;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-    }
-    .form-container {
-      background-color: #ffffff;
+      justify-content: center;
       padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
+    }
+    form {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 600px;
       width: 100%;
     }
-    h1 {
+    h2 {
       text-align: center;
-      color: #333333;
-      margin-bottom: 1.5rem;
+      color: #ff8fab;
     }
     label {
       display: block;
-      margin-top: 1rem;
-      color: #555555;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #555;
     }
-    select, input[type="number"] {
+    input, select, textarea, button {
       width: 100%;
-      padding: 0.5rem;
       margin-top: 0.5rem;
-      border: 1px solid #cccccc;
-      border-radius: 4px;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      font-size: 1rem;
     }
     button {
-      margin-top: 1.5rem;
-      width: 100%;
-      padding: 0.75rem;
-      background-color: #a8dadc;
-      border: none;
-      border-radius: 4px;
-      color: #ffffff;
-      font-size: 1rem;
+      background: #ffc2d1;
+      color: #fff;
+      font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 2rem;
     }
     button:hover {
-      background-color: #457b9d;
+      background: #ff8fab;
     }
   </style>
 </head>
 <body>
-  <div class="form-container">
-    <h1>ชื่อหัวฟอร์มของเรา</h1>
-    <form id="customForm">
-      <fieldset>
-        <legend for="2082416532">วันที่ เปลี่ยน-ซื้อ แบตเตอรี่ :</legend>
-        <div class="form-group">
-            <p class="help-block">ตัวอย่าง : 23 / 12 / 2025</p>
-            <input type="date" id="1466271673_date" placeholder="15/4/2568" class="form-control" >
-        </div>
-    </fieldset>
 
-      <fieldset>
-        <legend for="1261821081">เบอร์โทรศัพท์ ผู้ซื้อ :</legend>
-        <div class="form-group">
-            <input id="1337987657" type="text" name="entry.1337987657" class="form-control" required>
-        </div>
-    </fieldset>
+  <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLScKTHnmM3GWaoUwTusnD9MOBI3ND4FaDLL7Uw2TsFkeSK53QA/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <h2>ลงทะเบียนรับประกัน</h2>
 
-      <fieldset>
-        <legend for="1358296149">ประเภทบริการ :</legend>
-        <div class="form-group">
-            <p class="help-block">[ สามารถข้ามคำตอบนี้ได้ ]</p>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" name="entry.846612547" value="บริการ นอกสถานที่" >
-                    บริการ นอกสถานที่
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" name="entry.846612547" value="หน้าร้าน โปรแบต" >
-                    หน้าร้าน โปรแบต
-                </label>
-            </div>
-        </div>
-    </fieldset>
+    <label>วันที่ เปลี่ยน-ซื้อ แบตเตอรี่ :</label>
+    <input type="date" name="entry.1111111111" required />
 
-      <fieldset>
-        <legend for="98565871">ยี่ห้อรถ - รุ่น - ทะเบียน - จังหวัด :</legend>
-        <div class="form-group">
-            <p class="help-block">ตัวอย่าง : Toyota Alphard  กข 2020 กทม.</p>
-            <input id="1057129787" type="text" name="entry.1057129787" class="form-control" required>
-        </div>
-    </fieldset>
+    <label>เบอร์โทรศัพท์ ผู้ซื้อ :</label>
+    <input type="text" name="entry.2222222222" required />
 
-      <fieldset>
-        <legend for="1577974053">รุ่นแบตเตอรี่ที่เปลี่ยน :</legend>
-        <div class="form-group">
-            <p class="help-block">[ สามารถข้ามคำตอบนี้ได้ ]</p>
-            <input id="490785800" type="text" name="entry.490785800" class="form-control" >
-        </div>
-    </fieldset>
+    <label>ประเภทบริการ :</label>
+    <select name="entry.3333333333" required>
+      <option value="บริการ นอกสถานที่">บริการ นอกสถานที่</option>
+      <option value="หน้าร้าน โปรแบต">หน้าร้าน โปรแบต</option>
+    </select>
 
-      <fieldset>
-        <legend for="1355252599">แนะนำ-ติ-ชม :</legend>
-        <div class="form-group">
-            <p class="help-block">[ สามารถข้ามคำตอบนี้ได้ ]</p>
-            <input id="1111723542" type="text" name="entry.1111723542" class="form-control" >
-        </div>
-    </fieldset>
+    <label>ยี่ห้อรถ - รุ่น - ทะเบียน - จังหวัด :</label>
+    <input type="text" name="entry.4444444444" required />
 
-      <fieldset>
-        <legend for="1586559506">PDPA Consent :</legend>
-        <div class="form-group">
-            <div class="radio">
-                <label>
-                    <input type="radio" name="entry.1691501080" value="ยินยอม" required>
-                    ยินยอม
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="entry.1691501080" value="ไม่ยินยอม ( เช็คประกันให้ไม่ได้ )" required>
-                    ไม่ยินยอม ( เช็คประกันให้ไม่ได้ )
-                </label>
-            </div>
-        </div>
-    </fieldset>
+    <label>รุ่นแบตเตอรี่ที่เปลี่ยน :</label>
+    <input type="text" name="entry.5555555555" required />
 
-      <button type="submit">ส่งข้อมูล</button>
-    </form>
-  </div>
+    <label>แนะนำ-ติ-ชม :</label>
+    <input type="text" name="entry.6666666666" />
+
+    <label>PDPA Consent :</label>
+    <select name="entry.7777777777" required>
+      <option value="ยินยอมให้ใช้ข้อมูล">ยินยอมให้เก็บรักษาข้อมูล</option>
+      <option value="ไม่ยินยอม">ไม่ยินยอม</option>
+    </select>
+
+    <button type="submit">ส่งข้อมูล</button>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('ส่งข้อมูลเรียบร้อยแล้ว');document.getElementById('myForm').reset();}"></iframe>
+  </form>
 
   <script>
-    document.getElementById('customForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent default form submission
-
-      const form = e.target;
-      const data = new FormData(form);
-
-      fetch('https://docs.google.com/forms/d/e/1FAIpQLScKTHnmM3GWaoUwTusnD9MOBI3ND4FaDLL7Uw2TsFkeSK53QA/viewform?usp=pp_url', {
-        method: 'POST',
-        mode: 'no-cors',
-        body: data
-      }).then(() => {
-        // Optionally, reset the form or display a success message
-        form.reset();
-        alert('ส่งข้อมูลเรียบร้อยแล้ว!');
-      }).catch((error) => {
-        console.error('Error!', error.message);
-      });
-    });
+    let submitted = false;
   </script>
+
 </body>
 </html>
